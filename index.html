@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phone Hunting</title>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Daisy And Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .font-poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="font-poppins">
+  <header>
+    <nav>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+
+          <a class="btn btn-ghost normal-case text-xl">Hot Gadgets</a>
+        </div>
+
+        <div class="navbar-end">
+          <a class="bg-[#0D6EFD] px-10 py-4 rounded-lg text-xl font-bold text-white">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto px-4 my-12">
+      <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold text-center text-[#100F0F]">Apple Iphone 13 Pro Max</h1>
+      <p class="text-center text-[#706F6F] my-7 max-w-xl mx-auto text-lg">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+        some form, by injected humou.
+      </p>
+      <div class="flex justify-center">
+        <a href="#" class="bg-[#0D6EFD] px-10 py-4 rounded-lg text-xl font-bold text-white">Buy Now</a>
+
+
+      </div>
+  </header>
+  <main class="container mx-auto">
+    <div class="mb-10">
+      <h3 class="text-4xl font-semibold mb-7 text-[#100F0F] text-center">Search your phone</h3>
+
+
+
+      <div class="relative w-11/12 md:w-2/3 lg:w-1/3 mx-auto">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+          </svg>
+        </div>
+        <input type="search" id="search-field"
+          class="block w-full p-4 pl-10 text-sm text-black outline outline-blue-400 rounded-lg"
+          placeholder="Search ...">
+        <button id="search-btn" onclick="handleSearch()""
+          class=" text-white absolute right-2.5 top-2 bg-blue-700 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
+      </div>
+
+    </div>
+     
+    <!-- mobile container -->
+    <!-- search result -->
+    <section>
+      <!-- spinner -->
+      <div class=" text-center my-36 hidden" id="loading-spinner">
+
+          <span class="loading loading-dots loading-lg text-blue-600"></span>
+      </div>
+      <!-- search result -->
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      </div>
+      <!-- show all button -->
+      <div class="text-center my-6">
+        <button id="show-all-button" onclick="showAllButton()"
+          class="items-center px-9 py-4 text-xl font-medium text-center text-white bg-blue-700 rounded-lg hidden">
+          Show All
+        </button>
+
+      </div>
+
+      </section>
+      <!-- modal -->
+      <dialog id="showDetails" class="modal modal-bottom sm:modal-middle">
+        <form method="dialog" class="modal-box">
+          <div id="show-details-modal">
+
+          </div>
+          <div class="modal-action">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </div>
+        </form>
+      </dialog>
+
+
+  </main>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
